@@ -1,0 +1,35 @@
+name:                battleships
+version:             0.1.0.0
+github:              "mpilgrem/battleships"
+license:             BSD3
+author:              "Mike Pilgrem"
+maintainer:          "public@pilgrem.com"
+copyright:           "Copyright 2021 Mike Pilgrem"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+synopsis:            Brute force solution of battleships puzzles
+category:            Experimental
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/mpilgrem/battleships#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- array
+- vector
+
+executables:
+  battleships:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -Wall
