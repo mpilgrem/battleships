@@ -6,7 +6,9 @@ cabal-version: 1.12
 
 name:           battleships
 version:        0.1.0.0
+synopsis:       Brute force solution of battleships puzzles
 description:    Please see the README on GitHub at <https://github.com/mpilgrem/battleships#readme>
+category:       Experimental
 homepage:       https://github.com/mpilgrem/battleships#readme
 bug-reports:    https://github.com/mpilgrem/battleships/issues
 author:         Mike Pilgrem
@@ -23,6 +25,19 @@ source-repository head
   type: git
   location: https://github.com/mpilgrem/battleships
 
+library
+  exposed-modules:
+      Battleships
+  other-modules:
+      Paths_battleships
+  hs-source-dirs:
+      src
+  build-depends:
+      array
+    , base >=4.7 && <5
+    , vector
+  default-language: Haskell2010
+
 executable battleships
   main-is: Main.hs
   other-modules:
@@ -33,5 +48,6 @@ executable battleships
   build-depends:
       array
     , base >=4.7 && <5
+    , battleships
     , vector
   default-language: Haskell2010

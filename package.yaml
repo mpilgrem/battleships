@@ -24,10 +24,15 @@ dependencies:
 - array
 - vector
 
+library:
+  source-dirs:           src
+
 executables:
   battleships:
     main:                Main.hs
     source-dirs:         app
+    dependencies:
+    - battleships
     ghc-options:
     - -threaded
     - -rtsopts
