@@ -98,7 +98,7 @@ showBoard b =
     "\n"
   showCell mCellStatus = case mCellStatus of
     Nothing -> ' '
-    Just Sea -> '\x2592'
+    Just Sea -> '\x2591'
     Just Boat -> '\x2588'
   showVInfo =
     concatMap show (V.toList $ info b A.! V) <>

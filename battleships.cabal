@@ -44,7 +44,7 @@ executable battleships
       Paths_battleships
   hs-source-dirs:
       app
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall -O2
   build-depends:
       array
     , base >=4.7 && <5
